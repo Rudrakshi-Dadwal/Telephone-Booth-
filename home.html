@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>90s Telephone Booth</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="scene">
+    <div class="grain"></div>
+    <div class="vignette"></div>
+
+    <section class="street-view active" id="streetView">
+      <div class="street-haze"></div>
+      <div class="booth-wrap">
+        <button class="booth" id="boothTrigger" aria-label="Enter telephone booth">
+          <div class="booth-top-sign">TELEPHONE</div>
+          <div class="booth-crown"></div>
+          <div class="booth-grid">
+            <span></span><span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <div class="booth-door-glass"></div>
+        </button>
+      </div>
+      <p class="street-caption">LONDON 1996, 17 JUNE</p>
+    </section>
+
+    <section class="interior-view" id="interiorView">
+      <div class="interior-bg"></div>
+      <div class="phone-panel">
+        <header class="panel-header">
+          <h1>Public Telephone</h1>
+          <p>Pull dial round to stop and let go</p>
+        </header>
+
+        <div class="dial-display" id="dialDisplay">_ _ _ _ _ _</div>
+
+        <div class="dial-area">
+          <aside class="pinned-note" aria-label="Pinned number note">
+            <span class="pin-head"></span>
+            <p class="note-title">Number</p>
+            <p class="note-number">985507</p>
+          </aside>
+
+          <div class="receiver-focus"></div>
+          <div class="receiver">
+            <div class="receiver-cord"></div>
+            <div class="receiver-body"></div>
+          </div>
+
+          <div class="dial-shell">
+            <div class="finger-stop"></div>
+            <div class="rotary-dial" id="rotaryDial" aria-label="Rotary dial">
+              <div class="dial-core">
+                <span>HEY..</span>
+                <span>WANT TO HEAR </span>
+                <span>MY HEART ?</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="subtitle-box" id="subtitleBox"></div>
+    </section>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
