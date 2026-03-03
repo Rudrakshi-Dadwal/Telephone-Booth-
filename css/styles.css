@@ -16,7 +16,7 @@ body {
   margin: 0;
   width: 100%;
   min-height: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 body {
@@ -30,6 +30,8 @@ body {
   position: relative;
   width: 100vw;
   height: 100vh;
+  height: 100dvh;
+  min-height: 100dvh;
   perspective: 1200px;
   overflow: hidden;
   transition: filter 0.9s ease, background 0.9s ease;
@@ -256,6 +258,7 @@ body {
   z-index: 4;
   width: min(92vw, 820px);
   height: min(92vh, 880px);
+  height: min(92dvh, 880px);
   border: 1px solid rgba(232, 216, 196, 0.3);
   border-radius: 18px;
   padding: 24px clamp(16px, 3vw, 34px);
@@ -556,7 +559,54 @@ body {
   100% { transform: rotate(-8deg); }
 }
 
+@media (max-width: 1024px) {
+  .booth {
+    width: min(40vw, 280px);
+    height: min(66vh, 620px);
+    min-height: 400px;
+  }
+
+  .street-caption {
+    bottom: 3%;
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
+  }
+
+  .phone-panel {
+    width: min(96vw, 760px);
+    padding: 20px clamp(14px, 2.4vw, 24px) 18px;
+    border-radius: 14px;
+  }
+
+  .dial-display {
+    margin-bottom: 18px;
+    letter-spacing: 0.25em;
+    min-height: 56px;
+  }
+
+  .receiver {
+    right: 9%;
+    width: 160px;
+  }
+
+  .pinned-note {
+    left: -4%;
+    top: -2%;
+    transform: rotate(-7deg) scale(0.9);
+  }
+
+  .subtitle-box {
+    bottom: 2%;
+    width: min(95vw, 760px);
+    font-size: 0.9rem;
+  }
+}
+
 @media (max-width: 760px) {
+  .scene {
+    perspective: 900px;
+  }
+
   .booth {
     width: min(58vw, 280px);
     min-height: 420px;
@@ -579,5 +629,211 @@ body {
 
   .panel-header p {
     letter-spacing: 0.09em;
+  }
+}
+
+@media (max-width: 640px) {
+  body {
+    letter-spacing: 0.04em;
+  }
+
+  .street-view {
+    animation: none;
+  }
+
+  .booth {
+    width: min(68vw, 260px);
+    height: min(64vh, 560px);
+    min-height: 360px;
+    padding: 12px 10px 14px;
+    border-width: 2px;
+  }
+
+  .booth-grid {
+    min-height: 220px;
+    gap: 6px;
+    padding: 7px;
+  }
+
+  .phone-panel {
+    width: min(97vw, 540px);
+    height: auto;
+    min-height: min(92dvh, 760px);
+    padding: 14px 10px 16px;
+  }
+
+  .panel-header h1 {
+    font-size: clamp(1.5rem, 7vw, 2rem);
+  }
+
+  .panel-header p {
+    margin: 4px 0 14px;
+    font-size: 0.66rem;
+    letter-spacing: 0.08em;
+  }
+
+  .dial-display {
+    padding: 10px 12px;
+    margin-bottom: 12px;
+    min-height: 48px;
+    font-size: clamp(1.05rem, 5.8vw, 1.5rem);
+    letter-spacing: 0.16em;
+  }
+
+  .receiver-focus {
+    width: min(92vw, 540px);
+    height: min(92vw, 540px);
+  }
+
+  .receiver {
+    width: 126px;
+    right: 2%;
+    top: 2%;
+  }
+
+  .receiver-cord {
+    height: 88px;
+    width: 8px;
+  }
+
+  .receiver-body {
+    height: 34px;
+  }
+
+  .dial-shell {
+    width: min(82vw, 360px);
+  }
+
+  .finger-stop {
+    width: 44px;
+    height: 56px;
+    right: 11%;
+    bottom: 11%;
+  }
+
+  .dial-hole {
+    font-size: clamp(0.8rem, 4vw, 1.06rem);
+  }
+
+  .dial-core {
+    width: 50%;
+    font-size: clamp(0.5rem, 2.2vw, 0.64rem);
+  }
+
+  .pinned-note {
+    width: 96px;
+    min-height: 92px;
+    left: -5%;
+    top: -10%;
+    padding: 20px 9px 8px 12px;
+    transform: rotate(-6deg) scale(0.78);
+  }
+
+  .note-title {
+    font-size: 0.52rem;
+  }
+
+  .note-number {
+    margin-top: 6px;
+    letter-spacing: 0.12em;
+  }
+
+  .subtitle-box {
+    width: min(96vw, 520px);
+    min-height: 48px;
+    padding: 8px 10px;
+    font-size: 0.76rem;
+    letter-spacing: 0.03em;
+    bottom: 1.2%;
+  }
+}
+
+@media (max-width: 480px) {
+  .scene {
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+
+  .booth {
+    width: min(74vw, 250px);
+    height: min(62vh, 520px);
+    min-height: 320px;
+    gap: 8px;
+    padding: 10px 8px 12px;
+  }
+
+  .booth-grid {
+    min-height: 190px;
+    gap: 5px;
+    padding: 6px;
+  }
+
+  .street-caption {
+    bottom: 2%;
+    letter-spacing: 0.1em;
+    font-size: 0.62rem;
+  }
+
+  .phone-panel {
+    width: 98vw;
+    min-height: min(90dvh, 740px);
+    padding: 12px 8px 14px;
+  }
+
+  .panel-header p {
+    margin: 3px 0 10px;
+    font-size: 0.6rem;
+    letter-spacing: 0.05em;
+  }
+
+  .dial-display {
+    margin-bottom: 10px;
+    letter-spacing: 0.1em;
+    font-size: clamp(0.95rem, 5.2vw, 1.2rem);
+  }
+
+  .receiver {
+    width: 108px;
+    right: 1%;
+    top: 1%;
+  }
+
+  .receiver-cord {
+    height: 74px;
+    width: 7px;
+  }
+
+  .receiver-body {
+    height: 30px;
+  }
+
+  .dial-shell {
+    width: min(86vw, 320px);
+  }
+
+  .pinned-note {
+    width: 84px;
+    min-height: 82px;
+    left: -2%;
+    top: -8%;
+    padding: 17px 8px 7px 9px;
+    transform: rotate(-5deg) scale(0.72);
+  }
+
+  .pin-head {
+    width: 14px;
+    height: 14px;
+  }
+
+  .note-number {
+    letter-spacing: 0.08em;
+  }
+
+  .subtitle-box {
+    width: 97vw;
+    min-height: 44px;
+    padding: 7px 8px;
+    font-size: 0.68rem;
+    letter-spacing: 0.02em;
   }
 }
